@@ -1,0 +1,317 @@
+.kitchen-section {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.kitchen-section .section-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.kitchen-section .section-header h2 {
+  font-size: 42px;
+  color: #8b1a1a;
+  margin-bottom: 20px;
+  font-style: italic;
+  font-family: Georgia, serif;
+}
+
+.kitchen-section .section-subtitle {
+  font-size: 16px;
+  color: #666;
+  max-width: 900px;
+  margin: 10px auto;
+  line-height: 1.8;
+}
+
+.kitchen-section .section-subtitle.highlight {
+  color: #8b1a1a;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Kitchen Gallery - Carousel wrapper */
+.kitchen-gallery-wrapper {
+  max-width: 1200px;
+  margin: 0 auto 45px;
+  padding: 0 20px;
+}
+
+.kitchen-slide {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.kitchen-image-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #f5f5f5;
+  aspect-ratio: 4/3;
+  width: 100%;
+}
+
+.kitchen-image-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(139, 26, 26, 0.2);
+}
+
+.kitchen-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f5f5f5;
+  transition: transform 0.3s ease;
+}
+
+.kitchen-image-card:hover .kitchen-image {
+  transform: scale(1.05);
+}
+
+/* Kitchen Info Box */
+.kitchen-info-box {
+  max-width: 800px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #8b1a1a 0%, #a52a2a 100%);
+  padding: 35px;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(139, 26, 26, 0.3);
+}
+
+.kitchen-info-box h3 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.checkmark {
+  width: 30px;
+  height: 30px;
+  background: white;
+  color: #8b1a1a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* Carousel arrows */
+.kitchen-section .slick-prev,
+.kitchen-section .slick-next {
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  background: #8b1a1a;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(139, 26, 26, 0.3);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kitchen-section .slick-prev:hover,
+.kitchen-section .slick-next:hover {
+  background: #a52a2a;
+  box-shadow: 0 4px 15px rgba(139, 26, 26, 0.5);
+}
+
+.kitchen-section .slick-prev {
+  left: 10px;
+}
+
+.kitchen-section .slick-next {
+  right: 10px;
+}
+
+.kitchen-section .slick-prev:before,
+.kitchen-section .slick-next:before {
+  font-size: 18px;
+  color: white;
+  opacity: 1;
+  line-height: 40px;
+}
+
+.kitchen-section .slick-prev:hover:before,
+.kitchen-section .slick-next:hover:before {
+  opacity: 1;
+  color: white;
+}
+
+.kitchen-section .slick-dots {
+  display: none !important;
+}
+
+/* Fix slick carousel overflow */
+.kitchen-section .slick-slider {
+  overflow: hidden;
+}
+
+.kitchen-section .slick-list {
+  margin: 0 -10px;
+}
+
+.kitchen-section .slick-slide {
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+/* Mobile Responsive */
+@media (max-width: 968px) {
+  .kitchen-section {
+    padding: 40px 15px;
+  }
+
+  .kitchen-section .section-header {
+    margin-bottom: 35px;
+  }
+
+  .kitchen-section .section-header h2 {
+    font-size: 32px;
+  }
+
+  .kitchen-gallery-wrapper {
+    padding: 0 15px;
+  }
+
+  .kitchen-slide {
+    padding: 8px;
+  }
+
+  .services-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .kitchen-info-box {
+    padding: 30px 25px;
+  }
+
+  .kitchen-info-box h3 {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .kitchen-gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* On mobile, all images stack vertically */
+  .kitchen-gallery-wrapper {
+    padding: 0 10px;
+  }
+
+  .kitchen-image {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .kitchen-section {
+    padding: 35px 15px;
+  }
+
+  .kitchen-section .section-header h2 {
+    font-size: 28px;
+  }
+
+  .kitchen-section .section-subtitle {
+    font-size: 14px;
+  }
+
+  .kitchen-gallery-wrapper {
+    padding: 0 5px;
+  }
+
+  .kitchen-section .slick-prev,
+  .kitchen-section .slick-next {
+    width: 35px;
+    height: 35px;
+  }
+
+  .kitchen-section .slick-prev {
+    left: 5px;
+  }
+
+  .kitchen-section .slick-next {
+    right: 5px;
+  }
+
+  .kitchen-section .slick-prev:before,
+  .kitchen-section .slick-next:before {
+    font-size: 16px;
+    line-height: 35px;
+  }
+
+  .kitchen-image {
+    height: 220px;
+  }
+
+  .service-item {
+    font-size: 16px;
+  }
+
+  .kitchen-info-box {
+    padding: 25px 20px;
+  }
+
+  .kitchen-info-box h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .kitchen-section {
+    padding: 30px 10px;
+  }
+
+  .kitchen-section .section-header h2 {
+    font-size: 24px;
+  }
+
+  .kitchen-image {
+    height: 200px;
+  }
+
+  .kitchen-info-box {
+    padding: 20px 15px;
+  }
+
+  .kitchen-info-box h3 {
+    font-size: 20px;
+  }
+
+  .service-item {
+    font-size: 15px;
+  }
+
+  .checkmark {
+    width: 25px;
+    height: 25px;
+    margin-right: 12px;
+    font-size: 14px;
+  }
+}

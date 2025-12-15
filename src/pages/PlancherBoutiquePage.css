@@ -1,0 +1,719 @@
+.plancher-boutique-page {
+  width: 100%;
+}
+
+.page-header {
+  background: linear-gradient(135deg, #8b1a1a 0%, #a52a2a 100%);
+  color: white;
+  padding: 80px 20px 60px;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  font-style: italic;
+  font-family: Georgia, serif;
+}
+
+.page-header p {
+  font-size: 20px;
+  opacity: 0.95;
+}
+
+.plancher-boutique-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-header h2 {
+  font-size: 42px;
+  color: #8b1a1a;
+  margin-bottom: 10px;
+  font-style: italic;
+  font-family: Georgia, serif;
+}
+
+.section-price {
+  font-size: 24px;
+  color: #8b1a1a;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #666;
+  font-style: italic;
+}
+
+.empty-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(139, 26, 26, 0.1);
+}
+
+.empty-section p {
+  font-size: 18px;
+  color: #999;
+  font-style: italic;
+}
+
+.plancher-carousel-wrapper {
+  margin-bottom: 45px;
+}
+
+.plancher-slide {
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.plancher-slide > div {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Fix slick carousel overflow on mobile */
+.plancher-boutique-page .slick-slider {
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.plancher-boutique-page .slick-list {
+  margin: 0 -8px;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.plancher-boutique-page .slick-slide {
+  padding: 0 8px;
+  box-sizing: border-box;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.6s ease;
+}
+
+.plancher-boutique-page .slick-track {
+  display: flex;
+  align-items: stretch;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.plancher-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  will-change: transform;
+}
+
+.plancher-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.plancher-image-wrapper {
+  width: 100%;
+  height: 220px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+.plancher-image {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f5f5f5;
+  transition: transform 0.3s ease;
+}
+
+.plancher-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(139, 26, 26, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.plancher-card:hover .plancher-overlay {
+  opacity: 1;
+}
+
+.plancher-card:hover .plancher-image {
+  transform: scale(1.05);
+}
+
+.view-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.view-text {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.plancher-info {
+  padding: 12px;
+  text-align: center;
+  flex: 1;
+}
+
+.plancher-info h3 {
+  color: #333;
+  font-size: 16px;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Carousel customization */
+.plancher-boutique-page .slick-prev,
+.plancher-boutique-page .slick-next {
+  width: 45px;
+  height: 45px;
+  z-index: 1;
+}
+
+.plancher-boutique-page .slick-prev {
+  left: 10px;
+}
+
+.plancher-boutique-page .slick-next {
+  right: 10px;
+}
+
+.plancher-boutique-page .slick-prev:before,
+.plancher-boutique-page .slick-next:before {
+  font-size: 45px;
+  color: #8b1a1a;
+  opacity: 0.7;
+}
+
+.plancher-boutique-page .slick-prev:hover:before,
+.plancher-boutique-page .slick-next:hover:before {
+  opacity: 1;
+}
+
+.plancher-boutique-page .slick-dots {
+  display: none !important;
+}
+
+.plancher-boutique-cta {
+  padding: 60px 20px;
+  background: white;
+  text-align: center;
+}
+
+.plancher-boutique-cta h2 {
+  font-size: 36px;
+  color: #8b1a1a;
+  margin-bottom: 15px;
+  font-style: italic;
+  font-family: Georgia, serif;
+}
+
+.plancher-boutique-cta p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #8b1a1a 0%, #a52a2a 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 26, 26, 0.3);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(139, 26, 26, 0.4);
+}
+
+/* Modal Styles */
+.plancher-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 0;
+  overflow-y: auto;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.plancher-modal-content {
+  background: white;
+  border-radius: 16px;
+  width: 80%;
+  max-width: 550px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.3s ease;
+  overflow: hidden;
+  margin: 80px auto;
+  border: 3px solid #8b1a1a;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-close-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(139, 26, 26, 0.9);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10002;
+  line-height: 1;
+  padding: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close-btn:hover {
+  background: #a52a2a;
+  transform: rotate(90deg) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.modal-image-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  padding: 25px;
+  overflow: hidden;
+  position: relative;
+}
+
+.modal-preview-image {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  max-height: 300px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border: 4px solid #8b1a1a;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-footer {
+  padding: 20px 25px;
+  text-align: center;
+  background: #fafafa;
+  border-top: 3px solid #e0e0e0;
+  flex-shrink: 0;
+}
+
+.modal-footer h3 {
+  color: #8b1a1a;
+  font-size: 22px;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+  font-style: italic;
+  font-family: Georgia, serif;
+}
+
+.modal-price {
+  font-size: 18px;
+  font-weight: 800;
+  color: #8b1a1a;
+  margin: 12px 0 20px 0;
+  display: block;
+}
+
+.modal-cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #8b1a1a 0%, #a52a2a 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(139, 26, 26, 0.4);
+  letter-spacing: 0.5px;
+}
+
+.modal-cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(139, 26, 26, 0.5);
+  color: white;
+  background: linear-gradient(135deg, #a52a2a 0%, #8b1a1a 100%);
+}
+
+/* Mobile Responsive */
+@media (max-width: 968px) {
+  .plancher-boutique-section {
+    padding: 40px 15px;
+  }
+
+  .section-header {
+    margin-bottom: 35px;
+  }
+
+  .section-header h2 {
+    font-size: 32px;
+  }
+
+  .section-price {
+    font-size: 20px;
+  }
+
+  .plancher-carousel-wrapper {
+    margin-bottom: 35px;
+  }
+
+  .plancher-slide {
+    padding: 8px;
+  }
+
+  .plancher-image-wrapper {
+    height: 200px;
+    min-height: 180px;
+  }
+
+  .plancher-info h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 60px 15px 40px;
+  }
+
+  .page-header h1 {
+    font-size: 36px;
+  }
+
+  .page-header p {
+    font-size: 16px;
+  }
+
+  .plancher-boutique-section {
+    padding: 35px 15px;
+  }
+
+  .section-header h2 {
+    font-size: 28px;
+  }
+
+  .section-price {
+    font-size: 18px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+  }
+
+  .plancher-boutique-page .slick-list {
+    margin: 0 -8px;
+  }
+
+  .plancher-boutique-page .slick-slide {
+    padding: 0 8px;
+  }
+
+  .plancher-slide {
+    padding: 8px;
+  }
+
+  .plancher-image-wrapper {
+    height: 220px;
+    min-height: 200px;
+    max-height: 240px;
+  }
+
+  .plancher-boutique-page .slick-prev,
+  .plancher-boutique-page .slick-next {
+    width: 35px;
+    height: 35px;
+  }
+
+  .plancher-boutique-page .slick-prev {
+    left: 5px;
+  }
+
+  .plancher-boutique-page .slick-next {
+    right: 5px;
+  }
+
+  .plancher-boutique-page .slick-prev:before,
+  .plancher-boutique-page .slick-next:before {
+    font-size: 30px;
+  }
+
+  .plancher-boutique-cta {
+    padding: 40px 15px;
+  }
+
+  .plancher-boutique-cta h2 {
+    font-size: 28px;
+  }
+
+  .plancher-boutique-cta p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header h1 {
+    font-size: 28px;
+  }
+
+  .plancher-boutique-section {
+    padding: 30px 10px;
+  }
+
+  .section-header {
+    margin-bottom: 25px;
+  }
+
+  .section-header h2 {
+    font-size: 24px;
+  }
+
+  .section-price {
+    font-size: 16px;
+  }
+
+  .section-subtitle {
+    font-size: 14px;
+  }
+
+  .plancher-boutique-page .slick-list {
+    margin: 0 -5px;
+  }
+
+  .plancher-boutique-page .slick-slide {
+    padding: 0 5px;
+  }
+
+  .plancher-slide {
+    padding: 5px;
+  }
+
+  .plancher-image-wrapper {
+    height: 200px;
+    min-height: 180px;
+    max-height: 220px;
+  }
+
+  .plancher-info {
+    padding: 12px;
+  }
+
+  .plancher-info h3 {
+    font-size: 14px;
+  }
+
+  .plancher-boutique-page .slick-prev,
+  .plancher-boutique-page .slick-next {
+    width: 32px;
+    height: 32px;
+  }
+
+  .plancher-boutique-page .slick-prev {
+    left: 3px;
+  }
+
+  .plancher-boutique-page .slick-next {
+    right: 3px;
+  }
+
+  .plancher-boutique-page .slick-prev:before,
+  .plancher-boutique-page .slick-next:before {
+    font-size: 28px;
+  }
+
+  .view-icon {
+    font-size: 24px;
+  }
+
+  .view-text {
+    font-size: 14px;
+  }
+
+  .plancher-boutique-cta h2 {
+    font-size: 24px;
+  }
+}
+
+/* Mobile Responsive Modal */
+@media (max-width: 768px) {
+  .plancher-modal-overlay {
+    padding: 20px 10px;
+  }
+
+  .plancher-modal-content {
+    max-width: 85%;
+    border-radius: 12px;
+    margin: 60px auto;
+    border-width: 2px;
+  }
+
+  .modal-close-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 26px;
+    top: 12px;
+    right: 12px;
+  }
+
+  .modal-image-container {
+    padding: 25px 20px;
+  }
+
+  .modal-preview-image {
+    max-width: 100%;
+    max-height: 280px;
+    border-width: 3px;
+  }
+
+  .modal-footer {
+    padding: 18px 20px;
+  }
+
+  .modal-footer h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .modal-price {
+    font-size: 16px;
+    margin: 10px 0 18px 0;
+  }
+
+  .modal-cta-button {
+    padding: 12px 28px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .plancher-modal-overlay {
+    padding: 15px 5px;
+  }
+
+  .plancher-modal-content {
+    max-width: 88%;
+    border-radius: 10px;
+    margin: 50px auto;
+    border-width: 2px;
+  }
+
+  .modal-close-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 24px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .modal-image-container {
+    padding: 20px 15px;
+  }
+
+  .modal-preview-image {
+    max-width: 100%;
+    max-height: 250px;
+    border-width: 3px;
+  }
+
+  .modal-footer {
+    padding: 15px 18px;
+  }
+
+  .modal-footer h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .modal-price {
+    font-size: 15px;
+    margin: 8px 0 15px 0;
+  }
+
+  .modal-cta-button {
+    padding: 11px 25px;
+    font-size: 13px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,17 @@
+/* 
+ * Title Font Styles - Clarendon Black Bold
+ * Clarendon font is available but not forced on all titles
+ * Reverted to original font styling
+ */
+
+/* Libre Clarendon Black Bold Font Face - Available if needed */
+@font-face {
+  font-family: 'Clarendon';
+  src: url('../assets/fonts/Clarendon-Black-Bold.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Font not forced - titles will use their original CSS font-family */
+
