@@ -45,8 +45,13 @@ function HeroCarousel() {
       title: "Rénovation de Cuisine",
       image: `/images/cuisine/${encodeURIComponent("Cuisine1.jpg")}`,
       link: "/services/cuisine"
+    },
+    {
+      id: 5,
+      title: "Portes sur Mesure",
+      image: `/images/PortesNew/${encodeURIComponent("WhatsApp Image 2025-12-23 at 11.23.44 PM.jpeg")}`,
+      link: "/services/portes"
     }
-    // Removed last Plancher slide (id: 5)
   ];
 
   const handleSlideClick = (link) => {

@@ -51,11 +51,10 @@ function StairsSection() {
     title: "Projet Escalier 1"
   };
 
-  // Group 28-3: 2 images - split 50/50
-  const group28_3 = {
-    type: 'split-2',
+  // Escalier 2 right photo - alone as a project
+  const escalier2_right = {
+    type: 'single',
     images: [
-      { filename: "IMG-20251110-WA0093.jpg", folder: "escaliers" },
       { filename: "IMG-20251110-WA0028.jpg", folder: "escaliers" }
     ],
     title: "Projet Escalier 2"
@@ -84,38 +83,48 @@ function StairsSection() {
     title: "Projet Escalier 4"
   };
 
-  // Group 21-20-27-18-31: 5 images -> remove 1, keep 4 (removing middle one: 27)
+  // Projet Escalier 5: top left and bottom right stay, top right moved to escalier 6, bottom left moved to new project
   const group21_20_27_18_31 = {
-    type: 'grid-4',
+    type: 'split-2',
     images: [
-      { filename: "IMG-20251110-WA0081 - Copy.jpg", folder: "escaliers" },
-      { filename: "IMG-20251110-WA0080 - Copy.jpg", folder: "escaliers" },
-      { filename: "IMG-20251110-WA0078 - Copy.jpg", folder: "escaliers" },
-      { filename: "IMG-20251110-WA0096.jpg", folder: "escaliers" }
+      { filename: "IMG-20251110-WA0081 - Copy.jpg", folder: "escaliers" }, // top left (stays)
+      { filename: "IMG-20251110-WA0096.jpg", folder: "escaliers" } // bottom right (stays)
     ],
     title: "Projet Escalier 5"
   };
 
-  // Group 22-23-24-25: 4 images - 2x2 grid
+  // Projet Escalier 6: top left stays, top right (original) stays, top right from escalier 5 added, bottom photos moved to new project
   const group22_23_24_25 = {
-    type: 'grid-4',
+    type: 'grid-3',
     images: [
-      { filename: "IMG-20251110-WA0083 - Copy.jpg", folder: "escaliers" },
-      { filename: "IMG-20251110-WA0088.jpg", folder: "escaliers" },
-      { filename: "IMG-20251110-WA0089.jpg", folder: "escaliers" },
-      { filename: "IMG-20251110-WA0090.jpg", folder: "escaliers" }
+      { filename: "IMG-20251110-WA0083 - Copy.jpg", folder: "escaliers" }, // top left (stays)
+      { filename: "IMG-20251110-WA0088.jpg", folder: "escaliers" }, // top right (original, stays)
+      { filename: "IMG-20251110-WA0080 - Copy.jpg", folder: "escaliers" } // top right from escalier 5
     ],
     title: "Projet Escalier 6"
+  };
+
+  // New independent project: escalier 2 left + escalier 6 bottom right + escalier 6 bottom left + escalier 5 left bottom (4 photos)
+  const newIndependentProject = {
+    type: 'grid-4',
+    images: [
+      { filename: "IMG-20251110-WA0093.jpg", folder: "escaliers" }, // escalier 2 left
+      { filename: "IMG-20251110-WA0090.jpg", folder: "escaliers" }, // escalier 6 bottom right
+      { filename: "IMG-20251110-WA0089.jpg", folder: "escaliers" }, // escalier 6 bottom left
+      { filename: "IMG-20251110-WA0078 - Copy.jpg", folder: "escaliers" } // escalier 5 left bottom
+    ],
+    title: "Projet Escalier 7"
   };
 
   // Combine all project groups
   const projectGroups = [
     group1_2,
-    group28_3,
+    escalier2_right,
     group6_7_8_9,
     group10_11_12,
     group21_20_27_18_31,
-    group22_23_24_25
+    group22_23_24_25,
+    newIndependentProject
   ];
 
   // Color Matching Escalier - separate section
@@ -129,6 +138,22 @@ function StairsSection() {
   // Render function for mixed image groups
   const renderMixedImages = (group) => {
     const { type, images, title } = group;
+
+    if (type === 'single') {
+      // 1 image: full width
+      return (
+        <div className="stairs-image-single">
+          <div
+            className="stairs-image-full"
+            style={{
+              backgroundImage: `url(${getImagePath(images[0].folder, images[0].filename)})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+          />
+        </div>
+      );
+    }
 
     if (type === 'split-2') {
       // 2 images: 50/50 split

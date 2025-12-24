@@ -159,25 +159,35 @@ function PortesSection() {
 
   // Helper function for image path
   const getImagePath = (folder, filename) => {
-    const encoded = filename.replace(/ /g, '%20');
+    const encoded = encodeURIComponent(filename);
     return `/images/${folder}/${encoded}`;
   };
 
-  // Portes images from general/Portes folder
+  // Portes images from PortesNew folder
   const portesImages = [
-    "IMG-20251110-WA0031.jpg",
-    "IMG-20251110-WA0036.jpg",
-    "IMG-20251110-WA0039.jpg",
-    "IMG-20251110-WA0040.jpg",
-    "IMG-20251110-WA0041.jpg",
-    "IMG-20251110-WA0071.jpg"
+    "WhatsApp Image 2025-12-23 at 11.23.44 PM.jpeg",
+    "WhatsApp Image 2025-12-23 at 11.23.47 PM (1).jpeg",
+    "WhatsApp Image 2025-12-23 at 11.23.47 PM (2).jpeg",
+    "WhatsApp Image 2025-12-23 at 11.23.47 PM.jpeg",
+    "WhatsApp Image 2025-12-23 at 11.23.48 PM (1).jpeg",
+    "WhatsApp Image 2025-12-23 at 11.23.48 PM (10).jpeg",
+    "WhatsApp Image 2025-12-23 at 11.23.48 PM (2).jpeg",
+    "WhatsApp Image 2025-12-23 at 11.23.48 PM (3).jpeg",
+    "WhatsApp Image 2025-12-23 at 11.23.48 PM (4).jpeg",
+    "WhatsApp Image 2025-12-23 at 11.23.48 PM (5).jpeg",
+    "WhatsApp Image 2025-12-23 at 11.23.48 PM (6).jpeg",
+    "WhatsApp Image 2025-12-23 at 11.23.48 PM (7).jpeg",
+    "WhatsApp Image 2025-12-23 at 11.23.48 PM (8).jpeg",
+    "WhatsApp Image 2025-12-23 at 11.23.48 PM (9).jpeg",
+    "WhatsApp Image 2025-12-23 at 11.23.48 PM.jpeg",
+    "WhatsApp Image 2025-12-23 at 11.23.49 PM.jpeg"
   ];
 
   // Simple naming: Porte 1, Porte 2, etc.
   const portesTypes = portesImages.map((img, index) => ({
     id: index + 1,
     name: `Porte ${index + 1}`,
-    image: getImagePath('general/Portes', img)
+    image: getImagePath('PortesNew', img)
   }));
 
   return (
